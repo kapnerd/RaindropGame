@@ -4,8 +4,8 @@ class Raindrop {
 
   Raindrop(float a, float b) {
     loc = new PVector(a, b);
-    v = new PVector(0, 10);
-    acc = new PVector(0, .3);
+    v = new PVector(0, 5);
+    acc = new PVector(0, random(.03,.09));
     diam = 20;
   }
 
@@ -32,6 +32,6 @@ class Raindrop {
 
   void reset() {
     loc.y = 0;
-    v.set(0, 10);
+    v.set(0, 5);
   }
 }
