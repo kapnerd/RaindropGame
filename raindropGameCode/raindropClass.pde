@@ -31,7 +31,7 @@ class Raindrop {
   }
 
   void reset() {
-    loc.y = 0;
+    loc.y = -20;
     v.set(0, 5);
   }
 }
