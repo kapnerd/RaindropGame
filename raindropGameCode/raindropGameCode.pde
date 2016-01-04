@@ -5,6 +5,7 @@ Bucket b;
 int score;
 int l;
 PImage vac;
+PImage base;
 
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object
@@ -20,12 +21,14 @@ void setup() {
   textSize(50);
   textAlign(CENTER, CENTER);
   vac = loadImage("vac.png");
+  base = loadImage("basement.jpg");
   imageMode(CENTER);
 }
 
 void draw() {
+  background(0);
+  image(base, width/2, height/2, 1200, 800);
   mouse.set(mouseX, mouseY);             //set value of mouse as mouseX,mouseY
-  background(200);
   b.update();
   b.display();
   drop.add(new Raindrop(random(width), random(-20, 0)));
@@ -44,7 +47,7 @@ void draw() {
       }
     }
   }
-  fill(0, 0, 255);
+  fill(0, 0, 255, 75);
   rect(0, height-l, width, l);
   fill(255, 0, 0);
   text(score, width/2, height/2);

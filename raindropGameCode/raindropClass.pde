@@ -16,7 +16,7 @@ class Raindrop {
 
   void display() {
     noStroke();
-    fill(0, 0, 255);
+    fill(0, 0, 255,75);
     ellipse(loc.x, loc.y, diam, diam); //display a circle at loc
   }
 
