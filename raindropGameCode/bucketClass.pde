@@ -12,7 +12,7 @@ class Bucket {
   }
 
   void display() {
-    fill(0);
+    fill(0,0);
     ellipse(loc.x, loc.y, diam, diam);
   }
 }
